@@ -195,6 +195,7 @@ h1{
 }
 span{
   background: var(--text-gradient);
+    text-shadow:  0px 0px 30px #0dbcdba3;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -242,7 +243,7 @@ text-align: center;
     display:flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 200px;
+    margin-bottom: 0px;
 }
 
 
@@ -296,6 +297,15 @@ p{
  
 }
 
+.line{
+   
+   height: 2px;
+   margin: 0px 10%;
+   border-radius: 80%;
+   background: var(--text-gradient);
+   margin-bottom: 200px;
+}
+
 /* --------------languages=------------ */
 
 .language-card{
@@ -303,10 +313,10 @@ p{
     flex-wrap: wrap;  
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 100px;
     margin-top: 20px;
+    margin-bottom: 200px;
 
-    
 }
 
 .conic-gradient{
@@ -317,6 +327,17 @@ p{
     position: relative;
 
 }   
+.eng-text{
+    
+    display: inline-flex;
+    margin-top: 150px;
+    text-align: center;
+    padding-left: 30px;
+    color: var(--heading-white);
+
+}
+
+
 .conic-gradient-2{
     height: 120px ;
     width: 120px;
@@ -339,6 +360,7 @@ p{
     background-image: conic-gradient(from 10deg, #0DBDDB  0% 30% , #B1B9C5 30% 100% );
     position: relative;
 
+
 }
 
 
@@ -353,7 +375,7 @@ p{
   height: 108px ;
   width: 108px;
   border-radius: 50%;
-  background-color: white;
+  background-color:#0F1628 ;
   margin: 5px 0px 0px 0px;
 
 
@@ -382,13 +404,16 @@ p{
     height: 150px;
     border-radius: 50%;
     border: 1.5px solid var(--primary-color);
-    outline: 1px solid var(--secondary-color);
+    outline: 1px solid rgba(128, 128, 128, 0.545);
     outline-offset: 5px ;
     position: absolute;
     top: -20px;
     left: -22px;
     
 }   
+
+/* ----------projects----------------- */
+
 
 
 
