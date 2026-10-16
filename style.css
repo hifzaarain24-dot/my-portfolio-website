@@ -19,6 +19,7 @@ html{
 
 
 :root{
+    --text-gradient:linear-gradient(to right, #0DBDDB , #2583F6 );
     --primary-color: #0DBDDB;
     --secondary-color:#B1B9C5;
     --white-color: #FDFEFF;
@@ -95,7 +96,10 @@ h1{
     word-spacing: 0.50rem;
 }     
 span{
-    color: var(--primary-color);
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+     color: transparent;
     border-bottom: 3px solid var(--primary-color);
     padding-right: 15px;
 }
@@ -116,7 +120,7 @@ p{
 
 }
 .button-1{
-    background: linear-gradient(to right, #00B3DC, #2583F6);
+    background: var(--text-gradient);
     color: var(--white-color);
     
 
@@ -190,7 +194,10 @@ h1{
 
 }
 span{
-    color: var(--primary-color);
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
     border-bottom: 3px solid var(--primary-color);
 }
 p{
@@ -235,6 +242,7 @@ text-align: center;
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 200px;
 }
 
 
@@ -287,3 +295,101 @@ p{
 }     
  
 }
+
+/* --------------languages=------------ */
+
+.language-card{
+    display: flex;
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+
+    
+}
+
+.conic-gradient{
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 10deg,#0DBDDB 0% 90% , #B1B9C5 90% 100% );
+    position: relative;
+
+}   
+.conic-gradient-2{
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 10deg,#0DBDDB 0% 50% , #B1B9C5 50% 100% );
+    position: relative;
+}
+.conic-gradient-3{
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 10deg,#0DBDDB 0% 40% , #B1B9C5 40% 100% );
+    position: relative;
+
+}
+.conic-gradient-4{
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 10deg, #0DBDDB  0% 30% , #B1B9C5 30% 100% );
+    position: relative;
+
+}
+
+
+.language-text{
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 6px;
+  height: 108px ;
+  width: 108px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 5px 0px 0px 0px;
+
+
+:nth-child(1){
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+:nth-child(2){
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+
+}
+
+.language-text::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1.5px solid var(--primary-color);
+    outline: 1px solid var(--secondary-color);
+    outline-offset: 5px ;
+    position: absolute;
+    top: -20px;
+    left: -22px;
+    
+}   
+
+
+
+
