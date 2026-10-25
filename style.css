@@ -1,6 +1,7 @@
 body{
-    background-color: #0F1628;
-
+    background-color: 
+    #0b101d;
+    
 
 }
 html{
@@ -11,7 +12,7 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", cursive;
+    font-family: "Poppins", 'Segoe UI', Tahoma,  Verdana, sans-serif;
     color: var(--secondary-color);
     text-transform: capitalize;
     cursor: url("icons/cursor.svg") 12 12, auto;
@@ -26,6 +27,12 @@ html{
     --white-color: #FDFEFF;
     --heading-white:rgba(255, 255, 255, 0.93);
 }
+
+@property --progress {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: false;
+}
 /* -----------------navbar--------------- */
 header{
     display: flex;
@@ -38,7 +45,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    background-color: rgba(0, 0, 0, 0.344);
+    background-color: rgba(0, 0, 0, 0.485);
     padding: 20px 30px;
     margin-top: 30px;
     border-radius: 35px;
@@ -89,6 +96,7 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    margin: 80px 0px;
     
 
      
@@ -106,13 +114,12 @@ span{
     background: var(--text-gradient);
     background-clip: text;
     -webkit-background-clip: text;
-     color: transparent;
+    color: transparent;
     border-bottom: 3px solid var(--primary-color);
     padding-right: 15px;
 }
 
 p{
-   
     padding-bottom: 1rem;
     
 }
@@ -125,7 +132,7 @@ p{
     margin: 5px;
 &:hover{
     scale: 1.1;
-      box-shadow: 0px 0px 8px var(--primary-color);
+    box-shadow: 0px 0px 8px var(--primary-color);
     transition: all ease-in 0.10s ;
 }   
 
@@ -154,6 +161,80 @@ img{
     padding-right: 8px;
 }        
 }
+.main-img{
+ position: relative;
+
+
+
+.img-1{
+    border-radius: 50%;
+    border: 5px solid #0F1628;
+    outline: 5px solid var(--primary-color);
+    background-color: white;
+    padding: 0px 10px;
+    box-shadow: 0px 0px 50px var(--primary-color);  
+}    
+}
+   
+.one{
+    position: absolute;
+    top: -72px;
+    left: 120px; 
+    animation: iconMoves 15s infinite alternate-reverse;
+}  
+.two{
+    position: absolute;
+    bottom: -70px;
+    left: 120px; 
+    animation: iconMoves 15s infinite alternate;
+    
+}   
+.three{
+    position: absolute;
+    left: -80px;
+    top: 120px;
+    animation: iconMoves 15s infinite alternate;
+}  
+.four{
+    position: absolute;
+    top: 120px;
+    right:  -80px;
+    animation: iconMoves 15s infinite alternate-reverse;
+}  
+.five{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    animation: iconMoves 15s infinite alternate-reverse;    
+}  
+.six{
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    animation: iconMoves 15s infinite alternate;
+}
+.seven{
+    position: absolute;
+    bottom: -15px;
+    left: -30px;
+    animation: iconMoves 15s infinite alternate-reverse;
+}
+.eight{
+    position: absolute;
+    bottom: -15px;
+    right: -30px;
+    animation: iconMoves 15s infinite alternatE;
+}
+@keyframes iconMoves {
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+     transform: rotate(360deg);
+    }
+}
+
+
 
 
 /* ------------------RIBBON----------- */
@@ -190,6 +271,7 @@ img{
     gap: 50px;
     margin-top: 200px;
     margin-bottom: 200px;
+    
 }
 
 
@@ -197,21 +279,70 @@ img{
     max-width: 300px;
     height: 450px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     border: 5px solid var(--primary-color);
     border-radius: 150px 150px 150px 150px;
     box-shadow: 0px 0px 70px var(--primary-color);
+    /* outline: 2px dotted var(--primary-color);
+    outline-offset: 10px; */
+    background-color: #0B4F64;
+    backdrop-filter: blur(10px) ;
+    -webkit-backdrop-filter: blur(10px);
+    /* overflow: hidden; */
+    position: relative;
+
+    
+   
+    
+img{
+    height: 400px;
+    width: 240px;
+    object-fit: cover;
+    
+ }      }
+.second-main-img::before{
+    content: "";
+    width: 250px;
+    height: 450px;
     outline: 2px dotted var(--primary-color);
     outline-offset: 10px;
-    background-color: #0B4F64;
-    overflow: hidden;
+    border-radius: 150px;
+    position: absolute;   
+    right: -5px;
+    bottom: -5px;
+    animation: hifza 4s infinite ease-in-out forwards;
+    z-index: -10;
+     opacity: 0.50;
+}
 
-img{
-&:hover{
-scale: 1.2;
- transition: all ease-in 0.30s ;
-}  
-}      
+@keyframes hifza {
+
+    0%{
+        rotate: 0deg;
+  
+    }
+    20%{
+
+    }
+    40%{
+
+
+    }
+    60%{
+    
+
+
+    }
+    80%{
+
+    }
+    100%{
+       rotate: 180deg;
+    
+
+    }
+
+    
 }
 .about-text{
 
@@ -354,20 +485,10 @@ p{
     gap: 100px;
     margin-top: 20px;
     margin-bottom: 200px;
-    
-
 }
-
-.conic-gradient{
-    height: 120px ;
-    width: 120px;
-    border-radius: 50%;
-    background-image: conic-gradient(from 10deg,#0DBDDB 0% 90% , #B1B9C5 90% 100% );
+.parent-div{
     position: relative;
-
-  
-
-}   
+}
 .eng-text{
     
     display: inline-flex;
@@ -375,33 +496,29 @@ p{
     text-align: center;
     padding-left: 30px;
     color: var(--heading-white);
-
 }
 
+.conic-gradient{
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 0deg, white  0% var(--progress) , #0DBDDB var(--progress) 100% );
+    position: absolute;
+}  
+.conic-gradient-1{
+     animation:  conicOne 3s  ease forwards;
+} 
 
 .conic-gradient-2{
-    height: 120px ;
-    width: 120px;
-    border-radius: 50%;
-    background-image: conic-gradient(from 10deg,#0DBDDB 0% 50% , #B1B9C5 50% 100% );
-    position: relative;
+    animation:  conicTwo 3s  ease forwards ;
 }
 .conic-gradient-3{
-    height: 120px ;
-    width: 120px;
-    border-radius: 50%;
-    background-image: conic-gradient(from 10deg,#0DBDDB 0% 40% , #B1B9C5 40% 100% );
-    position: relative;
+   animation:  conicThree 3s  ease forwards ;
 
 }
 .conic-gradient-4{
-    height: 120px ;
-    width: 120px;
-    border-radius: 50%;
-    background-image: conic-gradient(from 10deg, #0DBDDB  0% 30% , #B1B9C5 30% 100% );
-    position: relative;
-
-
+    animation:  fill 3s  ease forwards ;
+    
 }
 
 .conic-gradient:hover, .conic-gradient-2:hover, .conic-gradient-3:hover, .conic-gradient-4:hover{
@@ -409,6 +526,39 @@ p{
     box-shadow: 0px 0px 15px var(--primary-color);
     transition: transform ease-in-out 0.30s;
 }
+@keyframes fill {
+    from{
+        --progress: 100%;
+    }
+  to {
+    --progress: 80%;
+  }
+}
+@keyframes conicOne {
+    from{
+        --progress: 100%;
+    }
+  to {
+    --progress: 30%;
+  }
+}
+@keyframes conicTwo {
+    from{
+        --progress: 100%;
+    }
+  to {
+    --progress: 20%;
+  }
+}
+@keyframes conicThree {
+    from{
+        --progress: 100%;
+    }
+  to {
+    --progress: 80%;
+  }
+}
+
 
 
 .language-text{
@@ -422,7 +572,7 @@ p{
   height: 108px ;
   width: 108px;
   border-radius: 50%;
-  background-color:#0F1628 ;
+  background-color:#0F1628;
   margin: 5px 0px 0px 0px;
 
 
@@ -469,7 +619,6 @@ p{
     gap: 40px;
     margin: 100px 20px;
     margin-bottom: 200px;
-   
 }
 
 .project-1{
@@ -480,18 +629,27 @@ p{
     -webkit-backdrop-filter: blur(10px);
     width: 370px;
     border-radius:15px;
+        position: relative; 
     &:hover{
     transition: all ease-in-out 0.20s;
     box-shadow: 0px 2px 6px var(--primary-color);
-      transform: translatey(-10px);
-}
+    transform: translatey(-10px);
+   
+    
 
+}
    
 img{
     height: 220px;
-    width: 370px;
+    width: 100%;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
+    &:hover{
+        opacity: 0.20;
+    }
+   
+    
+  
 }  
 h2{
    color: var(--heading-white);
@@ -506,6 +664,40 @@ button{
     
 } 
 }
+
+.hover-project-div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 69%;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    overflow: hidden;
+  &:hover{
+  background-color: #00b4dcd4;
+  opacity: 1;
+
+  }
+
+
+img{
+height: 45px;
+width: 45px;
+object-fit: contain;
+filter: brightness(50);
+cursor: pointer;
+&:hover{
+    opacity: 1;
+    filter: invert(20);
+}
+   } 
+
+}
+
 
 /* ------------contact---------- */
 
@@ -544,19 +736,22 @@ input[type="text"], input[type="email"], textarea{
     font-size: 0.90rem ;
     padding-left: 10px;
     margin-top: 20px;
+    color: white;
 
 }
 textarea{
     height: 150px;
     border-radius: 15px;
-    color: var(--heading-white);
+    padding-top: 10px;
+    
+
 }
 ::-webkit-input-placeholder {
     color: var(--heading-white);
 }
 
 .hr-line{
-    height: 5px;
+    height: 2px;
    border: none;
     background-color: var(--primary-color);
 }
@@ -591,9 +786,7 @@ img{
         padding: 0px 20px;
  
     }
-    .main-img img{
-    height: 400px;
-    }
+ 
     .ribbon-1, .ribbon-2{
         display: none;
     }
@@ -613,6 +806,7 @@ img{
     }
     .main-img{
         margin-bottom: 70px;
+        margin-top: 80px;
     }
     .ribbon-icons{
        gap: 0px;
@@ -651,10 +845,17 @@ img{
     }
     main{
         justify-content: center;
+        margin: 0px;
     }
-    .main-img{
-        height: 320px;
+  .main-text{
+    text-align: center;
+    p{
+        text-align: center;
     }
+  }
+  .second-main-img::before{
+    animation: none;
+  }
     .about{
         margin-left: 25px;
         margin-right: 25px;
@@ -674,25 +875,58 @@ input[type="text"], input[type="email"], textarea{
 .contact .second-main-img{
     margin-bottom: 100px;
 }
-
-}
-@media only screen and (max-width:425px){
-    .main-img{
-    height: 80;
-    display: none;
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
     }
+
+.main-img{
+    margin-top: 0px;
+    .one, .two, .three, .four, .five, .six, .seven, .eight {
+    display: none;
+
+    }
+    }
+}
+
+.hover-project-div  {
+    height: 66%;
+  
+& a img{
+
+  height: 35px;
+   width: 35px;
+    } 
 }
 @media only screen and (max-width:375px){
+    nav{
+        gap: 100px;
+    }
     .project-1{
-        width: 350px;
+        width: 80vw;
+       
+        overflow: hidden;
     img{
-        width: 340px;
+        width: 80vw;
         object-fit: contain;
+        height: fit-content;
     }    
     }
+.hover-project-div  {
+    height: 60%;
+& a img{
+
+  height: 30px;
+   width: 30px;
+    }     
+}
     .language-card{
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .card{
+         width: 90vw;
     }
     footer{
         display: grid;
@@ -701,4 +935,9 @@ input[type="text"], input[type="email"], textarea{
         row-gap: 15px;
     }
 
+}
+@media only screen and (max-width:425px){
+    .hover-project-div  {
+  
+}
 }

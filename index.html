@@ -14,12 +14,12 @@
      <nav>
       <h3><span>por</span>tfolio<span>.</span></h3>
       <ol>
-        <li><a href="">home</a></li>
-        <li><a href="">about</a></li>
-        <li><a href="">experience</a></li>
-        <li><a href="">language</a></li>
-        <li><a href="">work</a></li>
-        <li><a href="">contact</a></li>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#languages">language</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
       </ol>
       
       
@@ -30,7 +30,7 @@
 
 <!-- -------------------main -------------- -->
 
-<main>
+<main id="home">
 <div class="main-text about-text">
  <h1>hi, i'm <span>hifza naz</span> </h1> 
  <p>frontend  developer & UI/UX enthusiast. i create beautiful and  functional web applications.</p>
@@ -39,10 +39,19 @@
 </div>
 
 <div class="main-img">
-  <img src="main.png" alt="main-img" height="450" >
+  <div><img src="Friendly 3D Tech Student Avatar.png" class="img-1" alt="main-img" height="300" ></div>
+
+
+<img src="icons/react.svg" alt="" height="60" class="one">
+<img src="icons/angular.svg" alt="" height="60" class="two">
+<img src="icons/nodejs.svg" alt="" height="60" class="three">
+<img src="icons/tailwind.svg" alt="" height="60" class="four">
+<img src="icons/vuejs.svg" alt="" height="60" class="five">
+<img src="icons/typescript.svg" alt="" height="60" class="six">
+<img src="icons/js.svg" alt="" height="60" class="seven">
+<img src="icons/html.svg" alt="" height="60" class="eight">
+
 </div>
-
-
 </main>
 
 <!-- ---------------RIBBON-------- -->
@@ -62,7 +71,7 @@
 </div>
 
 <!-- -----------ABOUT---------- -->
- <section class="about">
+<section class="about" id="about">
 <div class="second-main-img"><img src="second-main-img.png" alt="" height="400"></div>
 
 <div class="about-text">
@@ -83,7 +92,7 @@
 
 
 <!-- -----------experience---------- -->
-<div class="about-text experience-text"><h1>my <span>experience</span></h1>
+<div class="about-text experience-text" id="experience"><h1>my <span>experience</span></h1>
 <p>my professional journey and educational background in the web development.</p>
 </div>
 
@@ -128,7 +137,7 @@
 
 <!-- -----------language--------- -->
 
-<section class="language">
+<section class="language" id="languages">
 <div class="about-text experience-text"> <h1>languages <span>i speak</span></h1>
 <p>communicating with the world in multiple languages.</p> 
 </div>
@@ -136,33 +145,22 @@
 <div class="language-card">
 
 <!-- ----------card-1------ -->
-
-<div class="conic-gradient">
+<div class="parent-div">
+<div class="conic-gradient conic-gradient-1"></div>
 
 <div class="language-text">
 <p >EN</p>
 <p>100%</p>
-
 </div>
+
 <div class="eng-text">english</div>
-
 </div>
 
 
-<!-- ----------card-2------ -->
-
-<div class="conic-gradient-2">
-
-<div class="language-text">
-<p>UR</p>
-<p>50%</p>
-</div>
-<div class="eng-text"> &nbsp;&nbsp;urdu</div>
-</div>
 
 <!-- ----------card-3------ -->
-
-<div class="conic-gradient-3">
+<div class="parent-div">
+<div class="conic-gradient-3 conic-gradient"></div>
 
 <div class="language-text">
 <p>GR</p>
@@ -171,11 +169,21 @@
 
 <div class="eng-text">german</div>
 </div>
+<!-- ----------card-2------ -->
+<div class="parent-div">
+<div class="conic-gradient-2 conic-gradient"></div>
+
+<div class="language-text">
+<p>UR</p>
+<p>80%</p>
+</div>
+<div class="eng-text"> &nbsp;&nbsp;urdu</div>
+</div>
+
 
 <!-- ----------card-4------ -->
-
-<div class="conic-gradient-4">
-
+<div class="parent-div">
+<div class="conic-gradient-4 conic-gradient"></div>
 <div class="language-text">
 <p>FR</p>
 <p>20%</p>
@@ -184,12 +192,12 @@
 <div class="eng-text">french</div>
 </div>
 
-
+<!-- closing language card tag -->
 </div>
 </section>
 
 <!-- --------projects-------------- -->
-<div class="about-text experience-text"> <h1>my <span>recent work</span></h1>
+<div class="about-text experience-text" id="projects"> <h1>my <span>recent work</span></h1>
 </div>
 <section class="projects">
 
@@ -198,18 +206,26 @@
 <img src="project-1.jpg" alt="" height="200">
 <h2>e-Commerce platform</h2>
 <button class="button-2">Html</button><button class="button-2">CSS</button><button class="button-2">Javascript</button>
+<div class="hover-project-div"><a href="https://hifzaarain24-dot.github.io/Ecommerce-website-UI/"><img src="icons/github.svg" alt="" title="live preview" height="25"></a>
+<a href="https://wa.me/923213077019"><img src="icons/sendmessage.svg" alt="" height="25" title="contact"></a></div>
 </div>
 
 <div class="project-1">
 <img src="project-2.jpg" alt="" height="200">
-<h2>e-Commerce platform</h2>
+<h2>SoundWave – Audio Store</h2>
 <button class="button-2">Html</button><button class="button-2">CSS</button><button class="button-2">Javascript</button>
+<div class="hover-project-div"><a href="https://hifzaarain24-dot.github.io/clothing-website-UI/"><img src="icons/github.svg" alt="" title="live preview" height="25"></a>
+<a href="https://wa.me/923213077019"><img src="icons/sendmessage.svg" alt="" height="25" title="contact"></a></div>
+</div>
 </div>
 
 <div class="project-1">
 <img src="project-3.jpg" alt="" height="200">
-<h2>e-Commerce platform</h2>
+<h2>Handmade Lifestyle Store</h2>
 <button class="button-2">Html</button><button class="button-2">CSS</button><button class="button-2">Javascript</button>
+<div class="hover-project-div"><a href="https://hifzaarain24-dot.github.io/audionic-website/"><img src="icons/github.svg" alt="" title="live preview" height="25"></a>
+<a href="https://wa.me/923213077019"><img src="icons/sendmessage.svg" alt="" height="25" title="contact"></a></div>
+</div>
 </div>
 
 
@@ -217,17 +233,17 @@
 
 <!-- -----------------contact----------- -->
 
-<section class="contact">
+<section class="contact" id="contact">
 
   <div class="second-main-img"><img src="fourth-main-img.png" alt="" height="400"></div>
 
 <div class="about-text contact-text" >
   <h1>contact <span>me</span></h1>
   <p>have a question or want to work together? send me a message!</p>
-  <form action="">
-  <input type="text" placeholder="your name">
-  <input type="email" placeholder="email address">
-  <textarea name="" id="" rows="5" cols="50">your message</textarea>
+  <form action="https://formspree.io/f/mpppqgjo" method="post">
+  <input type="text" placeholder="your name" name="name">
+  <input type="email" placeholder="email address" name="email address">
+  <textarea name="" id="" rows="5" cols="50" placeholder="your message" name="message"></textarea>
   <button class="button-1">send message <img src="icons/sendmessage.svg" height="20" alt=""></button>
   </form>
 </div>
