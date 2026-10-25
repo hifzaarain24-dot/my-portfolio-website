@@ -74,9 +74,12 @@ span{
 & a{
     text-decoration: none;
     font-weight: 600;
+    transition: all ease-in-out 0.50s;
+    cursor: pointer;
 
 &:hover{
     color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }   
 }
 
@@ -130,10 +133,11 @@ p{
     padding: 10px 25px;
     font-weight: 600;
     margin: 5px;
+    cursor: pointer;
 &:hover{
     scale: 1.1;
     box-shadow: 0px 0px 8px var(--primary-color);
-    transition: all ease-in 0.10s ;
+    transition: all ease-in 0.20s ;
 }   
 
 }
@@ -180,50 +184,50 @@ img{
     position: absolute;
     top: -72px;
     left: 120px; 
-    animation: iconMoves 15s infinite alternate-reverse;
+    animation: iconMoves 15s steps(500) infinite;
 }  
 .two{
     position: absolute;
     bottom: -70px;
     left: 120px; 
-    animation: iconMoves 15s infinite alternate;
+    animation: iconMoves 15s steps(500) infinite alternate;
     
 }   
 .three{
     position: absolute;
     left: -80px;
     top: 120px;
-    animation: iconMoves 15s infinite alternate;
+    animation: iconMoves 15s steps(500) infinite alternate;
 }  
 .four{
     position: absolute;
     top: 120px;
     right:  -80px;
-    animation: iconMoves 15s infinite alternate-reverse;
+    animation: iconMoves 15s infinite  steps(500) alternate-reverse;
 }  
 .five{
     position: absolute;
     top: -20px;
     left: -20px;
-    animation: iconMoves 15s infinite alternate-reverse;    
+    animation: iconMoves 15s infinite steps(500) alternate-reverse;    
 }  
 .six{
     position: absolute;
     top: -20px;
     right: -30px;
-    animation: iconMoves 15s infinite alternate;
+    animation: iconMoves 15s infinite  steps(500) alternate;
 }
 .seven{
     position: absolute;
     bottom: -15px;
     left: -30px;
-    animation: iconMoves 15s infinite alternate-reverse;
+    animation: iconMoves 15s infinite steps(500) alternate-reverse;
 }
 .eight{
     position: absolute;
     bottom: -15px;
     right: -30px;
-    animation: iconMoves 15s infinite alternatE;
+    animation: iconMoves 15s infinite steps(500) alternatE;
 }
 @keyframes iconMoves {
     from{
@@ -271,7 +275,7 @@ img{
     gap: 50px;
     margin-top: 200px;
     margin-bottom: 200px;
-    
+
 }
 
 
@@ -290,6 +294,7 @@ img{
     -webkit-backdrop-filter: blur(10px);
     /* overflow: hidden; */
     position: relative;
+
 
     
    
@@ -345,6 +350,7 @@ img{
     
 }
 .about-text{
+    
 
 h1{
     color: var(--heading-white);
@@ -404,6 +410,7 @@ text-align: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 0px;
+
 }
 
 
@@ -417,8 +424,9 @@ text-align: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-bottom: 50px;
+    
 &:hover{
-    transition: all ease-in-out 0.20s;
+    transition: all ease-in-out 0.40s;
     box-shadow: 0px 2px 6px var(--primary-color);
       transform: translatey(-10px);
 }
@@ -457,6 +465,7 @@ p{
 }
 .experience-text{
     text-align: center;
+    
 
 p{
      text-align: center;
@@ -482,7 +491,7 @@ p{
     flex-wrap: wrap;  
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 120px;
     margin-top: 20px;
     margin-bottom: 200px;
 }
@@ -506,25 +515,25 @@ p{
     position: absolute;
 }  
 .conic-gradient-1{
-     animation:  conicOne 3s  ease forwards;
+     animation:  conicOne 4s  ease forwards;
 } 
 
 .conic-gradient-2{
-    animation:  conicTwo 3s  ease forwards ;
+    animation:  conicTwo 4s  ease forwards ;
 }
 .conic-gradient-3{
-   animation:  conicThree 3s  ease forwards ;
+   animation:  conicThree 4s  ease forwards ;
 
 }
 .conic-gradient-4{
-    animation:  fill 3s  ease forwards ;
+    animation:  fill 4s  ease forwards ;
     
 }
 
-.conic-gradient:hover, .conic-gradient-2:hover, .conic-gradient-3:hover, .conic-gradient-4:hover{
+.parent-div:hover{
     transform: translatey(-10px);
-    box-shadow: 0px 0px 15px var(--primary-color);
-    transition: transform ease-in-out 0.30s;
+    filter:  drop-shadow(0px 0px 10px var(--primary-color)) ;
+    transition: transform ease-in-out 0.50s;
 }
 @keyframes fill {
     from{
@@ -629,15 +638,14 @@ p{
     -webkit-backdrop-filter: blur(10px);
     width: 370px;
     border-radius:15px;
-        position: relative; 
+    position: relative; 
     &:hover{
-    transition: all ease-in-out 0.20s;
+    transition: all ease-in-out 0.40s;
     box-shadow: 0px 2px 6px var(--primary-color);
     transform: translatey(-10px);
-   
-    
 
 }
+
    
 img{
     height: 220px;
@@ -648,8 +656,6 @@ img{
         opacity: 0.20;
     }
    
-    
-  
 }  
 h2{
    color: var(--heading-white);
@@ -684,15 +690,16 @@ button{
   }
 
 
-img{
-height: 45px;
-width: 45px;
+ & a img{
+height: 40px;
+width: 40px;
 object-fit: contain;
 filter: brightness(50);
 cursor: pointer;
 &:hover{
     opacity: 1;
     filter: invert(20);
+    
 }
    } 
 
@@ -774,6 +781,10 @@ img{
     border-radius: 50%;
     background-color: rgba(128, 128, 128, 0.462);
     margin-left: 10px;
+
+    &:hover{
+        background-color: var(--primary-color);
+    }
    
 }    
 }    
@@ -888,9 +899,8 @@ main{
 
     }
     }
-}
 
-.hover-project-div  {
+    .hover-project-div  {
     height: 66%;
   
 & a img{
@@ -899,6 +909,9 @@ main{
    width: 35px;
     } 
 }
+}
+
+
 @media only screen and (max-width:375px){
     nav{
         gap: 100px;
@@ -936,8 +949,8 @@ main{
     }
 
 }
-@media only screen and (max-width:425px){
+@media only screen and (max-width:320px){
     .hover-project-div  {
-  
+  height: 55%;
 }
 }
